@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.youzan.demo.dal.dao.StudentDAO">
+
+    <!--Student映射为StudentMap-->
+    <resultMap id="StudentMap" type="Student">
+        <result property="id" column="id"/>
+        <result property="username" column="name"/>
+        <result property="sex" column="sex"/>
+        <result property="score" column="score"/>
+    </resultMap>
+
+    <sql id="StudentList">
+        id,username,sex,score
+    </sql>
+
+    <insert id="insert" parameterType="Student">
+        INSERT  INTO Student(id,username,sex,score) VALUES(#{id},#{username},#{sex},#{score})
+    </insert>
+
+    <select id="select" resultMap="StudentMap" parameterType="java.lang.Integer">
+        SELECT
+        <include refid="StudentList"/>
+        FROM Student WHERE id=#{id}
+    </select>
+
+    <select id="selectScore" resultType="java.lang.Integer" parameterType="java.lang.Integer">
+        SELECT score  FROM Student
+
+         <if test="id!=NULL"  />
+        WHERE id=#{id}
+
+
+    </select>
+    <update id="update" parameterType="Student">
+        UPDATE Student set
+          id=#{id},
+          username=#{username},
+          sex=#{sex},
+          score=#{score}
+        where id=#{id}
+    </update>
+
+    <delete id="delete" parameterType="java.lang.Integer">
+        DELETE  FROM Student WHERE id=#{id}
+    </delete>
+
+
+</mapper>

@@ -1,0 +1,1 @@
+insert into Student(id, username, sex, score) values (1, 'zhou', 1, 100);

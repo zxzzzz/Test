@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.mousio:etcd4j:2.13.1-YOUZAN-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/mousio/etcd4j/2.13.1-YOUZAN-SNAPSHOT/etcd4j-2.13.1-YOUZAN-20170906.130358-2.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/mousio/etcd4j/2.13.1-YOUZAN-SNAPSHOT/etcd4j-2.13.1-YOUZAN-20170906.130358-2-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/mousio/etcd4j/2.13.1-YOUZAN-SNAPSHOT/etcd4j-2.13.1-YOUZAN-20170906.130358-2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
